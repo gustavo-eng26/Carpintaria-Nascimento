@@ -1,0 +1,33 @@
+/*
+ * Arquivo de Estilos Personalizados para Carpintaria Nascimento
+ *
+ * Este arquivo define variáveis CSS para a paleta de cores do site,
+ * complementando as classes de utilidade do Tailwind CSS.
+ * As variáveis podem ser usadas em estilos personalizados ou para
+ * estender a configuração do Tailwind (com um tailwind.config.js).
+ */
+
+:root {
+    /* Cores de Fundo (Backgrounds) */
+    --color-bg-dark: #1c1917; /* Equivalente a bg-stone-900 */
+    --color-bg-medium: #292524; /* Equivalente a bg-stone-800 */
+    --color-bg-light: #44403c; /* Equivalente a bg-stone-700 */
+    --color-bg-footer: #0c0a09; /* Equivalente a bg-stone-950 */
+
+    /* Cores de Texto */
+    --color-text-light: #e7e5e4; /* Equivalente a text-stone-200 */
+    --color-text-medium: #d6d3d1; /* Equivalente a text-stone-300 */
+    --color-text-heading: #f5f5f4; /* Equivalente a text-stone-100 */
+    --color-text-footer: #a8a29e; /* Equivalente a text-stone-400 */
+    --color-white: #ffffff; /* Equivalente a text-white */
+
+    /* Cores de Destaque (Accent / Primary) */
+    --color-primary: #fbbf24; /* Equivalente a text-amber-500 */
+    --color-accent-dark: #b45309; /* Equivalente a bg-amber-700 */
+    --color-accent-hover: #92400e; /* Equivalente a hover:bg-amber-800 */
+    --color-selection: #fcd34d; /* Equivalente a selection:bg-amber-200 */
+    --color-border-light: #d6d3d1; /* Equivalente a border-stone-300 */
+
+    /* Cores Específicas */
+    --color-whatsapp: #25D366; /* Cor do botão do WhatsApp */
+}
