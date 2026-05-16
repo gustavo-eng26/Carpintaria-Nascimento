@@ -84,27 +84,27 @@
 
                 <!-- Lado Direito: Formulário -->
                 <div class="bg-[var(--bg-form-container)] p-8 md:p-12 rounded-sm border border-stone-800">
-                    <form action="#" class="space-y-6">
+                    <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST" class="space-y-6">
                         <div>
                             <label class="block text-xs uppercase tracking-widest font-bold text-amber-500 mb-2">Seu Nome</label>
-                            <input type="text" class="w-full bg-[var(--bg-input)] border border-[var(--border-input)] p-4 text-white focus:outline-none focus:border-amber-700 transition" placeholder="Como podemos te chamar?">
+                            <input type="text" name="nome" required class="w-full bg-[var(--bg-input)] border border-[var(--border-input)] p-4 text-white focus:outline-none focus:border-amber-700 transition" placeholder="Como podemos te chamar?">
                         </div>
                         <div>
                             <label class="block text-xs uppercase tracking-widest font-bold text-amber-500 mb-2">WhatsApp / Telefone</label>
-                            <input type="tel" class="w-full bg-[var(--bg-input)] border border-[var(--border-input)] p-4 text-white focus:outline-none focus:border-amber-700 transition" placeholder="(31) 99999-9999">
+                            <input type="tel" name="whatsapp" required class="w-full bg-[var(--bg-input)] border border-[var(--border-input)] p-4 text-white focus:outline-none focus:border-amber-700 transition" placeholder="(31) 99999-9999">
                         </div>
                         <div>
                             <label class="block text-xs uppercase tracking-widest font-bold text-amber-500 mb-2">Tipo de Projeto</label>
-                            <select class="w-full bg-[var(--bg-input)] border border-[var(--border-input)] p-4 text-white focus:outline-none focus:border-amber-700 transition appearance-none">
-                                <option>Telhado Colonial</option>
-                                <option>Pergolado / Deck</option>
-                                <option>Estrutura Especial</option>
-                                <option>Outros</option>
+                            <select name="tipo_projeto" class="w-full bg-[var(--bg-input)] border border-[var(--border-input)] p-4 text-white focus:outline-none focus:border-amber-700 transition appearance-none">
+                                <option value="telhado">Telhado Colonial</option>
+                                <option value="pergolado">Pergolado / Deck</option>
+                                <option value="estrutura">Estrutura Especial</option>
+                                <option value="outros">Outros</option>
                             </select>
                         </div>
                         <div>
                             <label class="block text-xs uppercase tracking-widest font-bold text-amber-500 mb-2">Mensagem</label>
-                            <textarea rows="4" class="w-full bg-[var(--bg-input)] border border-[var(--border-input)] p-4 text-white focus:outline-none focus:border-amber-700 transition" placeholder="Conte-nos um pouco sobre sua obra..."></textarea>
+                            <textarea name="mensagem" rows="4" required class="w-full bg-[var(--bg-input)] border border-[var(--border-input)] p-4 text-white focus:outline-none focus:border-amber-700 transition" placeholder="Conte-nos um pouco sobre sua obra..."></textarea>
                         </div>
                         <button type="submit" class="w-full bg-amber-700 hover:bg-amber-800 text-white font-bold py-4 uppercase tracking-widest transition-all">Enviar Solicitação</button>
                     </form>
