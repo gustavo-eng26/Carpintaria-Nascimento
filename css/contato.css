@@ -1,0 +1,19 @@
+:root {
+    /* Cores e Fundos Específicos para Contato */
+    --bg-contato-hero: url('https://images.unsplash.com/photo-1520699049698-acd2fccb8cc8?q=80&w=2070');
+    --bg-contato-body: #1c1917; /* stone-900 */
+    --bg-form-container: #292524; /* stone-800 */
+    --border-input: #44403c; /* stone-700 */
+    --bg-input: #1c1917; /* stone-900 */
+
+    /* Cores de Destaque */
+    --cor-primaria: #fbbf24;    /* amber-500 */
+    --cor-detalhe: #b45309;     /* amber-700 */
+
+    /* Cores de Texto */
+    --texto-principal: #e7e5e4; /* stone-200 */
+    --texto-titulo: #ffffff;
+    --texto-suave: #a8a29e;     /* stone-400 */
+
+    --overlay-hero: rgba(28, 25, 23, 0.8);
+}
