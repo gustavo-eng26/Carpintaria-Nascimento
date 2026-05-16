@@ -1,0 +1,19 @@
+:root {
+    /* Fundos das Seções */
+    --bg-hero-image: url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=2070'); /* Troque pelo caminho da sua foto */
+    --bg-body: #1c1917;       /* Fundo geral (stone-900) */
+    --bg-hero-overlay: rgba(28, 25, 23, 0.7); /* Overlay da imagem principal */
+    --bg-diferenciais: #292524; /* Seção de parceiros (stone-800) */
+    --bg-servicos: #44403c;     /* Seção de serviços (stone-700) */
+    --bg-footer: #0c0a09;       /* Rodapé (stone-950) */
+
+    /* Cores de Destaque */
+    --cor-primaria: #fbbf24;    /* Amarelo Amber (amber-500) */
+    --cor-botao: #b45309;       /* Marrom/Laranja (amber-700) */
+    --cor-botao-hover: #92400e; /* Hover do botão (amber-800) */
+    
+    /* Cores de Texto */
+    --texto-principal: #e7e5e4; /* stone-200 */
+    --texto-titulo: #ffffff;    /* Branco total */
+    --texto-suave: #d6d3d1;     /* stone-300 */
+}

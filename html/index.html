@@ -9,16 +9,24 @@
     <!-- Link para o arquivo de estilos personalizados -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home-colors.css">
 </head>
-<body class="bg-stone-900 text-stone-200 selection:bg-amber-200">
+<body class="bg-[var(--bg-body)] text-[var(--texto-principal)] selection:bg-amber-200">
 
     <!-- Header / Nav -->
     <nav class="absolute w-full z-10 px-6 py-4 flex justify-between items-center bg-transparent">
         <div class="text-white font-bold text-xl tracking-wider uppercase">
             Carpintaria <span class="text-amber-500">Nascimento</span>
         </div>
+        <a href="index.html" class="flex items-center gap-4 group">
+            <!-- Espaço reservado para a Logo -->
+            <img src="../img/logo.png" alt="Logo Carpintaria Nascimento" class="h-12 w-auto object-contain hidden group-hover:block transition-all" onerror="this.style.display='none'">
+            <div class="text-white font-bold text-xl tracking-wider uppercase">
+                Carpintaria <span class="text-amber-500">Nascimento</span>
+            </div>
+        </a>
         <div class="hidden md:flex space-x-8 text-white font-medium text-sm uppercase tracking-widest">
-            <a href="index.html" class="hover:text-amber-500 transition border-b border-amber-500">Início</a>
+            <a href="index.html" class="text-amber-500 transition font-bold border-b-2 border-amber-500">Início</a>
             <a href="#servicos" class="hover:text-amber-500 transition">Serviços</a>
             <a href="sobre.html" class="hover:text-amber-500 transition">Sobre</a>
             <a href="#" class="hover:text-amber-500 transition">Contato</a>
@@ -29,24 +37,25 @@
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <!-- Background Image com Overlay (Simulando madeira/obra) -->
         <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=2070')] bg-cover bg-center">
-            <div class="absolute inset-0 bg-stone-900/70"></div>
+        <div class="absolute inset-0 bg-[var(--bg-hero-image)] bg-cover bg-center">
+            <div class="absolute inset-0 bg-[var(--bg-hero-overlay)]"></div>
         </div>
 
         <!-- Conteúdo Hero -->
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center lg:text-left">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-2/3">
-                    <span class="inline-block text-amber-500 font-semibold tracking-[0.2em] uppercase text-sm mb-4">
+                    <span class="inline-block text-[var(--cor-primaria)] font-semibold tracking-[0.2em] uppercase text-sm mb-4">
                         Belo Horizonte • MG
                     </span>
-                    <h1 class="text-4xl md:text-6xl text-white mb-6 leading-tight">
-                        A Arte que Resiste ao Tempo e <span class="italic text-stone-300">Embeleza seu Lar.</span>
+                    <h1 class="text-4xl md:text-6xl text-[var(--texto-titulo)] mb-6 leading-tight">
+                        A Arte que Resiste ao Tempo e <span class="italic text-[var(--texto-suave)]">Embeleza seu Lar.</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-stone-300 mb-10 leading-relaxed max-w-2xl">
-                        Em Belo Horizonte, onde a história e a arquitetura se entrelaçam, o Carpinteiro <strong class="text-white">Jonas Nascimento</strong> eleva a construção de telhados coloniais a uma verdadeira arte. Anos de experiência moldando a madeira com precisão e tradição.
+                    <p class="text-lg md:text-xl text-[var(--texto-suave)] mb-10 leading-relaxed max-w-2xl">
+                        Em Belo Horizonte, onde a história e a arquitetura se entrelaçam, o Carpinteiro <strong class="text-[var(--texto-titulo)]">Jonas Nascimento</strong> eleva a construção de telhados coloniais a uma verdadeira arte. Anos de experiência moldando a madeira com precisão e tradição.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="https://wa.me/SEU_NUMERO_AQUI" class="bg-amber-700 hover:bg-amber-800 text-white px-8 py-4 rounded-sm font-semibold transition-all transform hover:scale-105 shadow-lg">
+                        <a href="https://wa.me/5531999999999?text=Olá%20Jonas,%20vi%20seu%20site%20e%20gostaria%20de%20um%20orçamento%20para%20um%20projeto." class="bg-[var(--cor-botao)] hover:bg-[var(--cor-botao-hover)] text-white px-8 py-4 rounded-sm font-semibold transition-all transform hover:scale-105 shadow-lg">
                             Solicitar Orçamento Especializado
                         </a>
                         <a href="#" class="border border-stone-300 text-white hover:bg-white/10 px-8 py-4 rounded-sm font-semibold transition-all">
@@ -59,7 +68,7 @@
     </section>
 
     <!-- Seção: Diferenciais para Parceiros (B2B) -->
-    <section class="py-20 bg-stone-800">
+    <section class="py-20 bg-[var(--bg-diferenciais)]">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl mb-4 text-stone-100">Parceria Técnica para Profissionais</h2>
@@ -87,7 +96,7 @@
     </section>
 
     <!-- Seção: Serviços Especializados -->
-    <section id="servicos" class="py-24 bg-stone-700">
+    <section id="servicos" class="py-24 bg-[var(--bg-servicos)]">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex flex-col lg:flex-row gap-16 items-center">
                 <div class="lg:w-1/2">
@@ -122,7 +131,7 @@
     </section>
 
     <!-- Footer Simples -->
-    <footer class="bg-stone-950 text-stone-400 py-12 px-6">
+    <footer class="bg-[var(--bg-footer)] text-stone-400 py-12 px-6">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="text-white font-bold text-lg uppercase tracking-wider">
                 Carpintaria <span class="text-amber-500">Nascimento</span>
