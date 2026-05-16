@@ -1,0 +1,18 @@
+:root {
+    /* Fundos das Seções da Página de Serviços */
+    --bg-servicos-hero: url('https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?q=80&w=2070');
+    --bg-servicos-body: #1c1917; /* stone-900 */
+    --bg-card: #292524;         /* stone-800 */
+    --bg-card-hover: #44403c;   /* stone-700 */
+
+    /* Cores de Destaque */
+    --cor-primaria: #fbbf24;    /* amber-500 */
+    --cor-detalhe: #b45309;     /* amber-700 */
+
+    /* Cores de Texto */
+    --texto-principal: #e7e5e4; /* stone-200 */
+    --texto-titulo: #ffffff;
+    --texto-suave: #a8a29e;     /* stone-400 */
+
+    --overlay-hero: rgba(28, 25, 23, 0.85);
+}

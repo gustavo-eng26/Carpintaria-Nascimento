@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços | Carpintaria Nascimento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/servicos.css">
+</head>
+<body class="bg-[var(--bg-servicos-body)] text-[var(--texto-principal)] selection:bg-amber-200">
+
+    <!-- Header / Nav -->
+    <nav class="absolute w-full z-10 px-6 py-4 flex justify-between items-center bg-transparent">
+        <a href="index.html" class="flex items-center gap-4 group">
+            <img src="../img/logo.png" alt="Logo Carpintaria Nascimento" class="h-12 w-auto object-contain hidden group-hover:block transition-all" onerror="this.style.display='none'">
+            <div class="text-white font-bold text-xl tracking-wider uppercase">
+                Carpintaria <span class="text-amber-500">Nascimento</span>
+            </div>
+        </a>
+        <div class="hidden md:flex space-x-8 text-white font-medium text-sm uppercase tracking-widest">
+            <a href="index.html" class="hover:text-amber-500 transition">Início</a>
+            <a href="servicos.html" class="text-amber-500 transition font-bold border-b-2 border-amber-500">Serviços</a>
+            <a href="sobre.html" class="hover:text-amber-500 transition">Sobre</a>
+            <a href="#" class="hover:text-amber-500 transition">Contato</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section de Serviços -->
+    <section class="relative py-32 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-[var(--bg-servicos-hero)] bg-cover bg-center">
+            <div class="absolute inset-0 bg-[var(--overlay-hero)]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <span class="inline-block text-[var(--cor-primaria)] font-semibold tracking-[0.2em] uppercase text-sm mb-4">
+                Excelência em Madeira
+            </span>
+            <h1 class="text-4xl md:text-6xl text-[var(--texto-titulo)] mb-6 leading-tight">
+                Nossos <span class="italic text-[var(--texto-suave)]">Serviços</span>
+            </h1>
+            <p class="text-lg md:text-xl text-[var(--texto-suave)] max-w-2xl mx-auto">
+                Trabalho artesanal com precisão técnica para projetos residenciais e comerciais de alto padrão.
+            </p>
+        </div>
+    </section>
+
+    <!-- Grade de Serviços Detalhada -->
+    <section class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Serviço 1: Telhados Coloniais -->
+                <div class="bg-[var(--bg-card)] p-8 rounded-sm border border-stone-700 hover:bg-[var(--bg-card-hover)] transition-all group">
+                    <div class="w-12 h-12 bg-amber-700/20 flex items-center justify-center mb-6 group-hover:bg-amber-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-500 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-[var(--texto-titulo)] uppercase">Telhados Coloniais</h3>
+                    <p class="text-[var(--texto-suave)] leading-relaxed mb-6">Estruturas completas com madeiramento aparente, utilizando as melhores essências como Paraju e Angelim.</p>
+                    <ul class="text-sm space-y-2 text-stone-400">
+                        <li>• Madeiramento estrutural</li>
+                        <li>• Telhas cerâmicas e acabamentos</li>
+                        <li>• Impermeabilização e proteção</li>
+                    </ul>
+                </div>
+
+                <!-- Serviço 2: Pergolados e Decks -->
+                <div class="bg-[var(--bg-card)] p-8 rounded-sm border border-stone-700 hover:bg-[var(--bg-card-hover)] transition-all group">
+                    <div class="w-12 h-12 bg-amber-700/20 flex items-center justify-center mb-6 group-hover:bg-amber-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-500 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-[var(--texto-titulo)] uppercase">Áreas de Lazer</h3>
+                    <p class="text-[var(--texto-suave)] leading-relaxed mb-6">Criação de ambientes externos sofisticados com pergolados, decks e espaços gourmet.</p>
+                    <ul class="text-sm space-y-2 text-stone-400">
+                        <li>• Pergolados sob medida</li>
+                        <li>• Decks para piscinas e jardins</li>
+                        <li>• Quiosques e gazebos</li>
+                    </ul>
+                </div>
+
+                <!-- Serviço 3: Estruturas Especiais -->
+                <div class="bg-[var(--bg-card)] p-8 rounded-sm border border-stone-700 hover:bg-[var(--bg-card-hover)] transition-all group">
+                    <div class="w-12 h-12 bg-amber-700/20 flex items-center justify-center mb-6 group-hover:bg-amber-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-500 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-[var(--texto-titulo)] uppercase">Estruturas Pesadas</h3>
+                    <p class="text-[var(--texto-suave)] leading-relaxed mb-6">Execução técnica de mezaninos, escadas estruturais e grandes vãos de madeira.</p>
+                    <ul class="text-sm space-y-2 text-stone-400">
+                        <li>• Mezaninos residenciais</li>
+                        <li>• Escadas monumentais</li>
+                        <li>• Reforço estrutural em madeira</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 text-stone-400 py-12 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-white font-bold text-lg uppercase tracking-wider">
+                Carpintaria <span class="text-amber-500">Nascimento</span>
+            </div>
+            <p class="text-sm">© 2024 Jonas Nascimento - Belo Horizonte/MG. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5531999999999?text=Olá%20Jonas,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center"
+       aria-label="Contato via WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.891-11.891 3.181 0 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.231 3.481 8.403 0 6.557-5.332 11.892-11.893 11.892-1.99 0-3.951-.5-5.688-1.448l-6.305 1.666zm6.29-4.113l.354.21c1.512.899 3.256 1.374 5.046 1.374 5.454 0 9.895-4.442 9.895-9.896 0-2.641-1.028-5.122-2.897-6.991-1.87-1.87-4.35-2.899-6.998-2.899-5.454 0-9.896 4.442-9.896 9.896 0 2.144.693 4.231 2.003 5.961l.235.312-1.05 3.836 3.908-1.027zm11.303-5.264c-.301-.15-1.781-.879-2.056-.979-.275-.101-.475-.15-.675.15-.2.3-.775 1.012-.95 1.212-.175.2-.35.225-.651.075-.301-.15-1.27-.468-2.42-1.494-.894-.797-1.498-1.782-1.673-2.082-.175-.3-.019-.462.13-.611.135-.133.301-.35.451-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.244-.588-.492-.51-.675-.519-.175-.009-.375-.01-.575-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.112 3.224 5.118 4.522.715.309 1.273.494 1.708.633.718.227 1.371.195 1.888.118.576-.086 1.781-.728 2.031-1.429.25-.701.25-1.301.175-1.429-.075-.128-.275-.203-.576-.353z"/>
+        </svg>
+    </a>
+
+</body>
+</html>
