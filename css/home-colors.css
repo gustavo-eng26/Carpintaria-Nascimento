@@ -1,43 +1,82 @@
 :root {
-    /* Fundos das Seções */
-    --bg-hero-image: url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=2070'); /* Troque pelo caminho da sua foto */
-    --bg-body: transparent;       /* Fundo geral (stone-900) */
-    --bg-hero-overlay: rgba(28, 25, 23, 0.7); /* Overlay da imagem principal */
-    --bg-diferenciais: #292524; /* Seção de parceiros (stone-800) */
-    --bg-servicos: #44403c;     /* Seção de serviços (stone-700) */
-    --bg-footer: #0c0a09;       /* Rodapé (stone-950) */
+    /* Fundos das Seções - Modo Escuro */
+    --bg-hero-image: url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=2070');
+    --bg-body: #1c1917;
+    --bg-hero-overlay: rgba(28, 25, 23, 0.7);
+    --bg-diferenciais: #292524;
+    --bg-servicos: #44403c;
+    --bg-footer: #0c0a09;
 
     /* Cores de Destaque */
-    --cor-primaria: #fbbf24;    /* Amarelo Amber (amber-500) */
-    --cor-botao: #b45309;       /* Marrom/Laranja (amber-700) */
-    --cor-botao-hover: #92400e; /* Hover do botão (amber-800) */
+    --cor-primaria: #fbbf24;
+    --cor-botao: #b45309;
+    --cor-botao-hover: #92400e;
     
-    /* Cores de Texto */
-    --texto-principal: #e7e5e4; /* stone-200 */
-    --texto-titulo: #ffffff;    /* Branco total */
-    --texto-suave: #d6d3d1;     /* stone-300 */
+    /* Cores de Texto - Modo Escuro */
+    --texto-principal: #e7e5e4;
+    --texto-titulo: #ffffff;
+    --texto-suave: #d6d3d1;
 }
 
-/* Padrão de forro de telhado escuro */
-html, body {
-    width: 100%;
-    height: 100%;
-    background-image: 
-        repeating-linear-gradient(
-            90deg,
-            #2a1f1a 0px,
-            #2a1f1a 25px,
-            #241815 25px,
-            #241815 50px
-        ),
-        repeating-linear-gradient(
-            0deg,
-            #1f1511 0px,
-            #1f1511 20px,
-            #2a1f1a 20px,
-            #2a1f1a 40px
-        );
-    background-size: 50px 40px;
+/* Modo Claro */
+html[data-theme="light"] {
+    --bg-body: #f5f5f4;
+    --bg-hero-overlay: rgba(0, 0, 0, 0.1);
+    --bg-diferenciais: #e7e5e4;
+    --bg-servicos: #d6d3d1;
+    --bg-footer: #d6d3d1;
+    --texto-principal: #1a1a1a;
+    --texto-titulo: #000000;
+    --texto-suave: #2a2a2a;
+    --cor-primaria: #b45309;
+    --cor-botao: #b45309;
+    --cor-botao-hover: #92400e;
+}
+
+/* Padrão de forro de telhado escuro - Modo Escuro */
+html[data-theme="dark"] body,
+body {
+    background-image: url('../imagens/fundo.avif');
+    background-size: cover;
     background-attachment: fixed;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #1c1917;
+}
+
+/* Modo Claro */
+html[data-theme="light"] body {
+    background-image: linear-gradient(135deg, #e7e5e4 0%, #d6d3d1 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #f5f5f4;
+}
+
+/* Texto branco para preto em modo claro */
+html[data-theme="light"] .text-white,
+html[data-theme="light"] h1,
+html[data-theme="light"] h2,
+html[data-theme="light"] h3,
+html[data-theme="light"] h4,
+html[data-theme="light"] h5,
+html[data-theme="light"] h6,
+html[data-theme="light"] p,
+html[data-theme="light"] span,
+html[data-theme="light"] div,
+html[data-theme="light"] a {
+    color: #000000 !important;
+}
+
+html[data-theme="light"] .text-stone-100,
+html[data-theme="light"] .text-stone-200 {
+    color: #1a1a1a !important;
+}
+
+html[data-theme="light"] .text-stone-300,
+html[data-theme="light"] .text-stone-400 {
+    color: #2a2a2a !important;
+}
+
+html[data-theme="light"] .border-white {
+    border-color: #000000 !important;
 }
