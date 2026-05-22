@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Carpintaria Nascimento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/portifolio.css">
+</head>
+<body class="bg-[var(--bg-portifolio-body)] text-[var(--texto-principal)] selection:bg-amber-200">
+
+    <!-- Header / Nav -->
+    <nav class="absolute w-full z-10 px-6 py-4 flex justify-between items-center bg-transparent">
+        <a href="index.html" class="flex items-center group">
+            <div class="text-white font-bold text-xl tracking-wider uppercase">
+                Carpintaria <span class="text-amber-500">Nascimento</span>
+            </div>
+        </a>
+        <div class="hidden md:flex space-x-8 text-white font-medium text-sm uppercase tracking-widest">
+            <a href="index.html" class="hover:text-amber-500 transition">Início</a>
+            <a href="servicos.html" class="hover:text-amber-500 transition">Serviços</a>
+            <a href="portifolio.html" class="text-amber-500 transition font-bold border-b-2 border-amber-500">Portfólio</a>
+            <a href="sobre.html" class="hover:text-amber-500 transition">Sobre</a>
+            <a href="contato.html" class="hover:text-amber-500 transition">Contato</a>
+        </div>
+    </nav>
+
+    <!-- Hero Portfólio -->
+    <section class="relative py-32 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-[var(--bg-portifolio-hero)] bg-cover bg-center">
+            <div class="absolute inset-0 bg-[var(--overlay-hero)]"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl text-[var(--texto-titulo)] mb-6 leading-tight">
+                Nossas <span class="italic text-amber-500">Obras Entregues</span>
+            </h1>
+            <p class="text-lg md:text-xl text-[var(--texto-suave)] max-w-2xl mx-auto uppercase tracking-widest">
+                A transformação da madeira bruta em projetos de alto padrão.
+            </p>
+        </div>
+    </section>
+
+    <!-- Galeria de Fotos (Geral) -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-12 uppercase tracking-tighter border-l-4 border-amber-500 pl-4">Galeria de Projetos</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Foto 1 -->
+                <div class="aspect-square overflow-hidden rounded-sm group relative gallery-item cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?q=80&w=800" alt="Obra Carpintaria" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-bold uppercase text-sm">Telhado Colonial - Residencial</p>
+                    </div>
+                </div>
+                <!-- Foto 2 -->
+                <div class="aspect-square overflow-hidden rounded-sm group relative gallery-item cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800" alt="Obra Carpintaria" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-bold uppercase text-sm">Deck em Madeira Nobre</p>
+                    </div>
+                </div>
+                <!-- Foto 3 -->
+                <div class="aspect-square overflow-hidden rounded-sm group relative gallery-item cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1626014303757-6ec662475b5f?q=80&w=800" alt="Obra Carpintaria" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-bold uppercase text-sm">Estrutura de Pergolado</p>
+                    </div>
+                </div>
+                <!-- Adicionar mais fotos conforme necessário -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Vídeos -->
+    <section class="py-24 px-6 bg-stone-950">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-12 uppercase tracking-tighter border-l-4 border-amber-500 pl-4">Processos em Vídeo</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Vídeo 1 -->
+                <div class="bg-[var(--bg-gallery-card)] p-4 border border-stone-800 rounded-sm">
+                    <div class="video-container mb-4">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h4 class="text-white font-bold uppercase text-sm tracking-widest">Montagem de Estrutura Principal</h4>
+                    <p class="text-stone-400 text-xs mt-2">Veja os detalhes dos encaixes artesanais em Paraju.</p>
+                </div>
+                <!-- Vídeo 2 -->
+                <div class="bg-[var(--bg-gallery-card)] p-4 border border-stone-800 rounded-sm">
+                    <div class="video-container mb-4">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h4 class="text-white font-bold uppercase text-sm tracking-widest">Finalização de Cobertura Colonial</h4>
+                    <p class="text-stone-400 text-xs mt-2">Acompanhe o acabamento fino e proteção da madeira.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stone-950 text-stone-400 py-12 px-6 border-t border-stone-900 text-center md:text-left">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-white font-bold text-lg uppercase tracking-wider">
+                Carpintaria <span class="text-amber-500">Nascimento</span>
+            </div>
+            <p class="text-sm">© 2024 Jonas Nascimento - Belo Horizonte/MG.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/95 items-center justify-center p-4 backdrop-blur-sm">
+        <button id="close-lightbox" class="absolute top-6 right-6 text-white hover:text-amber-500 transition-colors z-[60]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        
+        <!-- Botão Anterior -->
+        <button id="prev-lightbox" class="absolute left-6 text-white hover:text-amber-500 transition-colors z-[60] hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+
+        <div class="flex flex-col items-center max-w-5xl w-full">
+            <img id="lightbox-img" src="" alt="Imagem Ampliada" class="max-w-full max-h-[85vh] rounded-sm shadow-2xl object-contain">
+            <p id="lightbox-caption" class="text-white mt-4 font-bold uppercase tracking-widest text-center"></p>
+        </div>
+        <!-- Botão Próximo -->
+        <button id="next-lightbox" class="absolute right-6 text-white hover:text-amber-500 transition-colors z-[60] hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </div>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/portifolio.js"></script>
+</body>
+</html>
