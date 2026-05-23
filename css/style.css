@@ -8,26 +8,48 @@
  */
 
 :root {
-    /* Cores de Fundo (Backgrounds) */
-    --color-bg-dark: #1c1917; /* Equivalente a bg-stone-900 */
-    --color-bg-medium: #292524; /* Equivalente a bg-stone-800 */
-    --color-bg-light: #44403c; /* Equivalente a bg-stone-700 */
-    --color-bg-footer: #0c0a09; /* Equivalente a bg-stone-950 */
+    /* Variáveis Globais - Paleta Original Escura */
+    --bg-body: #1c1917;
+    --bg-card: #292524;
+    --bg-card-hover: #44403c;
+    --bg-footer: #0c0a09;
+    --overlay-hero: rgba(28, 25, 23, 0.8);
 
-    /* Cores de Texto */
-    --color-text-light: #e7e5e4; /* Equivalente a text-stone-200 */
-    --color-text-medium: #d6d3d1; /* Equivalente a text-stone-300 */
-    --color-text-heading: #f5f5f4; /* Equivalente a text-stone-100 */
-    --color-text-footer: #a8a29e; /* Equivalente a text-stone-400 */
-    --color-white: #ffffff; /* Equivalente a text-white */
+    --texto-principal: #e7e5e4;
+    --texto-titulo: #ffffff;
+    --texto-suave: #d6d3d1;
 
-    /* Cores de Destaque (Accent / Primary) */
-    --color-primary: #fbbf24; /* Equivalente a text-amber-500 */
-    --color-accent-dark: #b45309; /* Equivalente a bg-amber-700 */
-    --color-accent-hover: #92400e; /* Equivalente a hover:bg-amber-800 */
-    --color-selection: #fcd34d; /* Equivalente a selection:bg-amber-200 */
-    --color-border-light: #d6d3d1; /* Equivalente a border-stone-300 */
+    --cor-primaria: #fbbf24;
+    --cor-botao: #b45309;
+    --cor-botao-hover: #92400e;
 
-    /* Cores Específicas */
-    --color-whatsapp: #25D366; /* Cor do botão do WhatsApp */
+    --bg-input: #1c1917;
+    --border-input: #44403c;
+}
+
+/* Estilos Base */
+body {
+    background-color: var(--bg-body);
+    color: var(--texto-principal);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, .font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Utilitários de Vídeo e Galeria */
+.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* Scrollbar Personalizada */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-footer); }
+::-webkit-scrollbar-thumb { background: var(--cor-botao); }
+::-webkit-scrollbar-thumb:hover { background: var(--cor-botao-hover); }
+
+/* Ajuste de Hero para Imagens de Fundo Externas */
+.bg-hero-overlay {
+    background-image: linear-gradient(var(--overlay-hero), var(--overlay-hero));
 }
