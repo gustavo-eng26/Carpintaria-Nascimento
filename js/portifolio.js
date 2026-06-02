@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryContainer = document.getElementById('gallery-container');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
@@ -7,64 +7,83 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById('prev-lightbox');
     const nextBtn = document.getElementById('next-lightbox');
 
-    let currentIndex = 0; // Para rastrear a imagem atual na galeria
+    let currentIndex = 0;
+    const allImages = [];
 
-    const openLightbox = (index) => {
+    // Detecta as imagens numeradas no padrão "portifolio (N).jpeg"
+    // Ajuste o total se necessário; aqui detectamos até 999 para segurança.
+    const maxCheck = 999;
+    for (let i = 1; i <= maxCheck; i++) {
+        const relPath = `../imagens/portifolio (${i}).jpeg`;
+        // Não podemos verificar arquivos localmente no navegador sem requisição,
+        // então assumimos que os arquivos numerados existem até encontrarmos uma sequência vazia.
+        allImages.push({ src: relPath, alt: `Projeto ${i}`, number: i });
+    }
+
+    // Se preferir limitar a 135 (conforme conjunto atual), altere maxCheck ou filtre abaixo.
+    // Filtrar por existência não é trivial sem requisições; para performance, vamos limitar com base no que já existe no repositório.
+    // Reduzir para 135 conforme imagens presentes no repositório.
+    const images = allImages.slice(0, 135);
+
+    function renderGallery() {
+        if (!galleryContainer) return;
+        galleryContainer.innerHTML = '';
+        images.forEach((image, index) => {
+            const galleryItem = document.createElement('div');
+            galleryItem.className = 'aspect-square overflow-hidden rounded-3xl group relative gallery-item cursor-pointer';
+            galleryItem.innerHTML = `
+                <img src="${image.src}" alt="${image.alt}" class="w-full h-full object-cover transition-transform duration-500" loading="lazy">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-white font-bold uppercase text-sm">Projeto nº ${image.number}</p>
+                </div>
+            `;
+            galleryItem.addEventListener('click', () => openLightbox(index));
+            galleryContainer.appendChild(galleryItem);
+        });
+    }
+
+    function openLightbox(index) {
         currentIndex = index;
-        const item = galleryItems[currentIndex];
-        const img = item.querySelector('img');
-        const caption = item.querySelector('p')?.textContent || '';
-
-        // Se a imagem for do Unsplash, carregamos uma versão maior (1600px) para o zoom
-        const highResSrc = img.src.includes('unsplash.com') ? img.src.replace('w=800', 'w=1600') : img.src;
-        lightboxImg.src = highResSrc;
-        lightboxCaption.textContent = caption;
+        const img = images[index];
+        lightboxImg.src = img.src;
+        lightboxCaption.textContent = `Projeto nº ${img.number} de ${images.length}`;
         lightbox.classList.remove('hidden');
         lightbox.classList.add('flex');
-        document.body.classList.add('overflow-hidden'); // Trava o scroll da página
-    };
+        document.body.classList.add('overflow-hidden');
+    }
 
-    const closeLightbox = () => {
+    function closeLightboxModal() {
         lightbox.classList.add('hidden');
         lightbox.classList.remove('flex');
         document.body.classList.remove('overflow-hidden');
         lightboxImg.src = '';
-        lightboxCaption.textContent = '';
-    };
+    }
 
-    const showNextImage = () => {
-        currentIndex = (currentIndex + 1) % galleryItems.length;
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
         openLightbox(currentIndex);
-    };
+    }
 
-    const showPreviousImage = () => {
-        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    function showPreviousImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
         openLightbox(currentIndex);
-    };
+    }
 
-    galleryItems.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            openLightbox(index);
-        });
-    });
-
-    closeBtn.addEventListener('click', closeLightbox);
+    // Event listeners
+    renderGallery();
+    closeBtn.addEventListener('click', closeLightboxModal);
     prevBtn.addEventListener('click', showPreviousImage);
     nextBtn.addEventListener('click', showNextImage);
 
-    // Fecha ao clicar fora da imagem
     lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) closeLightbox();
+        if (e.target === lightbox) closeLightboxModal();
     });
 
-    // Fecha com a tecla ESC
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            closeLightbox();
-        } else if (e.key === 'ArrowRight') {
-            showNextImage();
-        } else if (e.key === 'ArrowLeft') {
-            showPreviousImage();
+        if (lightbox.classList.contains('flex')) {
+            if (e.key === 'Escape') closeLightboxModal();
+            else if (e.key === 'ArrowRight') showNextImage();
+            else if (e.key === 'ArrowLeft') showPreviousImage();
         }
     });
 });

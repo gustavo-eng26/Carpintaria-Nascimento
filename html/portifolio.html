@@ -7,17 +7,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/portifolio.css">
 </head>
 <body class="bg-[var(--bg-body)] text-[var(--texto-principal)] selection:bg-amber-200">
 
     <!-- Header / Nav -->
-    <nav class="sticky top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-stone-900/90 backdrop-blur-md border-b border-stone-800">
+    <nav class="sticky top-0 w-full z-50 px-6 py-4 flex items-center justify-between bg-stone-900/90 backdrop-blur-md border-b border-stone-800">
         <a href="index.html" class="flex items-center group">
             <div class="text-white font-bold text-xl tracking-wider uppercase">
                 Carpintaria <span class="text-amber-500">Nascimento</span>
             </div>
         </a>
-        <div class="hidden md:flex space-x-8 text-white font-medium text-sm uppercase tracking-widest">
+
+        <button id="nav-toggle" class="md:hidden p-2 rounded text-white" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <div id="main-nav" class="hidden md:flex space-x-8 text-white font-medium text-sm uppercase tracking-widest">
             <a href="index.html" class="hover:text-amber-500 transition">Início</a>
             <a href="servicos.html" class="hover:text-amber-500 transition">Serviços</a>
             <a href="portifolio.html" class="text-amber-500 transition font-bold border-b-2 border-amber-500">Portfólio</a>
@@ -40,54 +48,11 @@
         </div>
     </section>
 
-    <!-- Galeria de Fotos (Geral) -->
+    <!-- Galeria de Fotos (dinâmica) -->
     <section class="py-24 px-6">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-2xl font-bold text-white mb-12 uppercase tracking-tighter border-l-4 border-amber-500 pl-4">Galeria de Projetos</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- Foto 1 -->
-                <div class="aspect-square overflow-hidden rounded-sm group relative gallery-item cursor-pointer">
-                    <img src="../imagens/portifolio1.jpg" alt="Obra Carpintaria Nascimento" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold uppercase text-sm">Telhado Colonial - Residencial</p>
-                    </div>
-                </div>
-                <!-- Foto 2 -->
-                <div class="aspect-square overflow-hidden rounded-sm group relative gallery-item cursor-pointer">
-                    <img src="../imagens/portifolio2.jpg" alt="Obra Carpintaria Nascimento" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold uppercase text-sm">Deck em Madeira Nobre</p>
-                    </div>
-                </div>
-                <!-- Foto 3 -->
-                <div class="aspect-square overflow-hidden rounded-sm group relative gallery-item cursor-pointer">
-                    <img src="../imagens/portifolio3.jpg" alt="Obra Carpintaria Nascimento" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold uppercase text-sm">Estrutura de Pergolado</p>
-                    </div>
-                </div>
-                <!-- Foto 4 -->
-                <div class="aspect-square overflow-hidden rounded-sm group relative gallery-item cursor-pointer">
-                    <img src="../imagens/portifolio4.jpg" alt="Obra Carpintaria Nascimento" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold uppercase text-sm">Projeto de Área de Lazer</p>
-                    </div>
-                </div>
-                <!-- Foto 5 -->
-                <div class="aspect-square overflow-hidden rounded-sm group relative gallery-item cursor-pointer">
-                    <img src="../imagens/portifolio5.jpg" alt="Obra Carpintaria Nascimento" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold uppercase text-sm">Madeiramento Estrutural</p>
-                    </div>
-                </div>
-                <!-- Foto 6 -->
-                <div class="aspect-square overflow-hidden rounded-sm group relative gallery-item cursor-pointer">
-                    <img src="../imagens/portifolio6.jpg" alt="Obra Carpintaria Nascimento" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-bold uppercase text-sm">Serviço Especializado BH</p>
-                    </div>
-                </div>
-            </div>
+            <div id="gallery-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
         </div>
     </section>
 

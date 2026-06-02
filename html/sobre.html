@@ -11,13 +11,20 @@
 <body class="bg-stone-900 text-stone-200 selection:bg-amber-200">
 
     <!-- Header / Nav -->
-    <nav class="w-full z-10 px-6 py-4 flex justify-between items-center bg-stone-950/50 backdrop-blur-md sticky top-0">
+    <nav class="sticky top-0 w-full z-50 px-6 py-4 flex items-center justify-between bg-stone-950/95 backdrop-blur-md border-b border-stone-800">
         <a href="index.html" class="flex items-center group">
             <div class="text-white font-bold text-xl tracking-wider uppercase">
                 Carpintaria <span class="text-amber-500">Nascimento</span>
             </div>
         </a>
-        <div class="hidden md:flex space-x-8 text-white font-medium text-sm uppercase tracking-widest">
+
+        <button id="nav-toggle" class="md:hidden p-2 rounded text-white" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <div id="main-nav" class="hidden md:flex space-x-8 text-white font-medium text-sm uppercase tracking-widest">
             <a href="index.html" class="hover:text-amber-500 transition">Início</a>
             <a href="servicos.html" class="hover:text-amber-500 transition">Serviços</a>
             <a href="portifolio.html" class="hover:text-amber-500 transition">Portfólio</a>

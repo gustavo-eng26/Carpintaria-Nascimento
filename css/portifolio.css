@@ -13,7 +13,26 @@
     --texto-suave: #a8a29e;     /* stone-400 */
 
     --overlay-hero: rgba(28, 25, 23, 0.8);
+
+        /* Ajustes visuais configuráveis */
+        --portfolio-img-radius: 1.5rem; /* raio das bordas das imagens */
+        --portfolio-hover-scale: 1.12;  /* escala ao passar o mouse */
 }
+
+    #gallery-container .gallery-item {
+        border-radius: var(--portfolio-img-radius);
+        overflow: hidden;
+    }
+
+    #gallery-container .gallery-item img {
+        border-radius: var(--portfolio-img-radius);
+        transition: transform 0.45s ease, box-shadow 0.25s ease;
+        will-change: transform;
+    }
+
+    #gallery-container .gallery-item:hover img {
+        transform: scale(var(--portfolio-hover-scale));
+    }
 
 .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
 .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
