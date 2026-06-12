@@ -8,23 +8,26 @@
  */
 
 :root {
-    /* Variáveis Globais - Paleta Original Escura */
-    --bg-body: #1c1917;
-    --bg-card: #292524;
-    --bg-card-hover: #44403c;
-    --bg-footer: #0c0a09;
-    --overlay-hero: rgba(28, 25, 23, 0.8);
+    /* Variáveis Globais - Paleta de Carpintaria (Marrom, Preto, Cinza) */
+    --bg-body: #2a2419;
+    --bg-card: #3d3530;
+    --bg-card-hover: #4a4238;
+    --bg-footer: #1a1612;
+    --bg-diferenciais: #362d24;
+    --bg-servicos: #2a2419;
+    --bg-gallery-card: #3d3530;
+    --overlay-hero: rgba(42, 36, 25, 0.85);
 
-    --texto-principal: #e7e5e4;
-    --texto-titulo: #ffffff;
-    --texto-suave: #d6d3d1;
+    --texto-principal: #e8e4dd;
+    --texto-titulo: #f5f1ed;
+    --texto-suave: #d4cec5;
 
-    --cor-primaria: #fbbf24;
-    --cor-botao: #b45309;
-    --cor-botao-hover: #92400e;
+    --cor-primaria: #d4a574;
+    --cor-botao: #8b6f47;
+    --cor-botao-hover: #6b5436;
 
-    --bg-input: #1c1917;
-    --border-input: #44403c;
+    --bg-input: #2a2419;
+    --border-input: #4a4238;
 }
 
 /* Estilos Base */
