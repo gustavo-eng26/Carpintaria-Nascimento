@@ -8,31 +8,36 @@
  */
 
 :root {
-    /* Variáveis Globais - Paleta de Carpintaria (Marrom, Preto, Cinza) */
-    --bg-body: #2a2419;
-    --bg-card: #3d3530;
-    --bg-card-hover: #4a4238;
-    --bg-footer: #1a1612;
-    --bg-diferenciais: #362d24;
-    --bg-servicos: #2a2419;
-    --bg-gallery-card: #3d3530;
-    --overlay-hero: rgba(42, 36, 25, 0.85);
+    /* Variáveis Globais - Paleta de Carpintaria (Preto, Marrom, Âmbar) */
+    --bg-body: #090705;
+    --bg-card: #2e2318;
+    --bg-card-hover: #403127;
+    --bg-footer: #080604;
+    --bg-diferenciais: #1f1711;
+    --bg-servicos: #251c14;
+    --bg-gallery-card: #36271a;
+    --overlay-hero: rgba(10, 6, 4, 0.75);
 
-    --texto-principal: #e8e4dd;
-    --texto-titulo: #f5f1ed;
-    --texto-suave: #d4cec5;
+    --texto-principal: #efe7dc;
+    --texto-titulo: #fff8eb;
+    --texto-suave: #d0bfae;
+    --texto-secundario: #c6b59a;
 
-    --cor-primaria: #d4a574;
-    --cor-botao: #8b6f47;
-    --cor-botao-hover: #6b5436;
+    --cor-primaria: #c08e57;
+    --cor-botao: #7f5a34;
+    --cor-botao-hover: #a46f3e;
 
-    --bg-input: #2a2419;
-    --border-input: #4a4238;
+    --bg-input: #1f1912;
+    --border-input: #4b3d30;
 }
 
 /* Estilos Base */
 body {
-    background-color: var(--bg-body);
+    background-image: linear-gradient(180deg, rgba(9,7,5,0.96), rgba(28,18,11,0.96)), url('../imagens/fundo.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
     color: var(--texto-principal);
     font-family: 'Inter', sans-serif;
     line-height: 1.6;

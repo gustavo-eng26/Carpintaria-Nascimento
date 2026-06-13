@@ -25,12 +25,17 @@
             </svg>
         </button>
 
-        <div id="main-nav" class="hidden md:flex space-x-8 text-white font-medium text-sm uppercase tracking-widest items-center">
+        <div id="main-nav" class="hidden md:flex space-x-6 text-white font-medium text-sm uppercase tracking-widest items-center">
             <a href="index.html" class="text-amber-500 transition font-bold border-b-2 border-amber-500">Início</a>
             <a href="servicos.html" class="hover:text-amber-500 transition">Serviços</a>
             <a href="portifolio.html" class="hover:text-amber-500 transition">Portfólio</a>
             <a href="sobre.html" class="hover:text-amber-500 transition">Sobre</a>
             <a href="contato.html" class="hover:text-amber-500 transition">Contato</a>
+            <a href="https://www.instagram.com/contrucaocarpintarianascimento?igsh=MWI5ZDY3cGlicGFqaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram Carpintaria Nascimento" class="ml-2 inline-flex items-center justify-center w-9 h-9 rounded bg-amber-700/10 hover:bg-amber-700/20 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-.88a1.13 1.13 0 1 1 0 2.25 1.13 1.13 0 0 1 0-2.25z"/>
+                </svg>
+            </a>
         </div>
     </nav>
 
@@ -43,9 +48,9 @@
         <!-- Conteúdo Hero -->
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center lg:text-left">
             <div class="flex flex-col lg:flex-row items-center gap-12">
-                <!-- Logo Posicionada à Esquerda -->
+                <!-- Imagem do projeto/identidade no lugar do logo de texto -->
                 <div class="lg:w-1/3 flex justify-center">
-                    <img src="../imagens/logo.jpg" alt="Logo Carpintaria Nascimento" class="h-96 w-auto object-contain transition-all hover:scale-110 duration-300 shadow-2xl rounded">
+                    <img src="../imagens/fundo.jpeg" alt="Fundo Carpintaria Nascimento" class="h-96 w-full max-w-sm object-cover transition-all duration-300 shadow-2xl rounded-3xl ring-2 ring-amber-300/40">
                 </div>
                 
                 <div class="lg:w-2/3">
@@ -104,12 +109,9 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex flex-col lg:flex-row gap-16 items-center">
                 <div class="lg:w-1/2">
-                    <div class="relative">
-                        <video controls class="rounded shadow-2xl w-full" poster="https://images.unsplash.com/photo-1626014303757-6ec662475b5f?q=80&w=1932">
-                            <source src="../VIDEO/VID-20260519-WA0259.mp4" type="video/mp4">
-                            Seu navegador não suporta vídeo HTML5.
-                        </video>
-                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-amber-700 -z-10 rounded"></div>
+                    <div class="relative overflow-hidden rounded-[2rem] shadow-2xl">
+                        <img src="../imagens/portifolio%20(49).jpeg" alt="Telhados Coloniais" class="w-full object-cover aspect-[4/3]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                     </div>
                 </div>
                 <div class="lg:w-1/2">
@@ -140,8 +142,13 @@
     <!-- Footer Simples -->
     <footer class="bg-[var(--bg-footer)] text-stone-400 py-12 px-6">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-white font-bold text-lg uppercase tracking-wider">
-                Carpintaria <span class="text-amber-500">Nascimento</span>
+            <div class="flex items-center gap-4">
+                <div class="text-white font-bold text-lg uppercase tracking-wider">Carpintaria <span class="text-amber-500">Nascimento</span></div>
+                <a href="https://www.instagram.com/contrucaocarpintarianascimento?igsh=MWI5ZDY3cGlicGFqaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram Carpintaria Nascimento" class="inline-flex items-center justify-center w-9 h-9 rounded bg-amber-700/10 hover:bg-amber-700/20 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-.88a1.13 1.13 0 1 1 0 2.25 1.13 1.13 0 0 1 0-2.25z"/>
+                    </svg>
+                </a>
             </div>
             <p class="text-sm">© 2024 Jonas Nascimento - Belo Horizonte/MG. Todos os direitos reservados.</p>
         </div>

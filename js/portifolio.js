@@ -69,8 +69,39 @@ document.addEventListener('DOMContentLoaded', () => {
         openLightbox(currentIndex);
     }
 
+    function renderVideoGrid() {
+        const videoGrid = document.getElementById('video-grid');
+        if (!videoGrid) return;
+
+        const videoFiles = [
+            'video (1).mp4',
+            'video (2).mp4',
+            'video (3).mp4',
+            'video (4).mp4',
+            'video (5).mp4',
+            'video (6).mp4',
+            'video7.mp4'
+        ];
+
+        videoGrid.innerHTML = '';
+        videoFiles.forEach((fileName, index) => {
+            const videoCard = document.createElement('div');
+            videoCard.className = 'bg-[var(--bg-gallery-card)] p-4 border border-stone-800 rounded-sm';
+            videoCard.innerHTML = `
+                <video controls class="w-full rounded-lg mb-4 bg-black">
+                    <source src="../VIDEO/${fileName}" type="video/mp4">
+                    Seu navegador não suporta vídeo HTML5.
+                </video>
+                <h4 class="text-white font-bold uppercase text-sm tracking-widest">Processo em Vídeo ${index + 1}</h4>
+                <p class="text-stone-400 text-xs mt-2">Acompanhe detalhes de acabamento e montagem da madeira.</p>
+            `;
+            videoGrid.appendChild(videoCard);
+        });
+    }
+
     // Event listeners
     renderGallery();
+    renderVideoGrid();
     closeBtn.addEventListener('click', closeLightboxModal);
     prevBtn.addEventListener('click', showPreviousImage);
     nextBtn.addEventListener('click', showNextImage);

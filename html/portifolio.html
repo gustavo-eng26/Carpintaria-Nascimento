@@ -25,18 +25,23 @@
             </svg>
         </button>
 
-        <div id="main-nav" class="hidden md:flex space-x-8 text-white font-medium text-sm uppercase tracking-widest">
+        <div id="main-nav" class="hidden md:flex space-x-6 text-white font-medium text-sm uppercase tracking-widest">
             <a href="index.html" class="hover:text-amber-500 transition">Início</a>
             <a href="servicos.html" class="hover:text-amber-500 transition">Serviços</a>
             <a href="portifolio.html" class="text-amber-500 transition font-bold border-b-2 border-amber-500">Portfólio</a>
             <a href="sobre.html" class="hover:text-amber-500 transition">Sobre</a>
             <a href="contato.html" class="hover:text-amber-500 transition">Contato</a>
+            <a href="https://www.instagram.com/contrucaocarpintarianascimento?igsh=MWI5ZDY3cGlicGFqaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram Carpintaria Nascimento" class="ml-2 inline-flex items-center justify-center w-9 h-9 rounded bg-amber-700/10 hover:bg-amber-700/20 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-.88a1.13 1.13 0 1 1 0 2.25 1.13 1.13 0 0 1 0-2.25z"/>
+                </svg>
+            </a>
         </div>
     </nav>
 
     <!-- Hero Portfólio -->
     <section class="relative py-32 flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: linear-gradient(rgba(28, 25, 23, 0.8), rgba(28, 25, 23, 0.8)), url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=2070');">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: linear-gradient(rgba(9, 7, 5, 0.85), rgba(9, 7, 5, 0.85)), url('../imagens/fundo.jpeg');">
         </div>
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
             <h1 class="text-4xl md:text-6xl text-[var(--texto-titulo)] mb-6 leading-tight">
@@ -60,31 +65,21 @@
     <section class="py-24 px-6 bg-stone-950">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-2xl font-bold text-white mb-12 uppercase tracking-tighter border-l-4 border-amber-500 pl-4">Processos em Vídeo</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Vídeo 1 -->
-                <div class="bg-[var(--bg-gallery-card)] p-4 border border-stone-800 rounded-sm">
-                    <div class="video-container mb-4">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <h4 class="text-white font-bold uppercase text-sm tracking-widest">Montagem de Estrutura Principal</h4>
-                    <p class="text-stone-400 text-xs mt-2">Veja os detalhes dos encaixes artesanais em Paraju.</p>
-                </div>
-                <!-- Vídeo 2 -->
-                <div class="bg-[var(--bg-gallery-card)] p-4 border border-stone-800 rounded-sm">
-                    <div class="video-container mb-4">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <h4 class="text-white font-bold uppercase text-sm tracking-widest">Finalização de Cobertura Colonial</h4>
-                    <p class="text-stone-400 text-xs mt-2">Acompanhe o acabamento fino e proteção da madeira.</p>
-                </div>
+            <div class="grid md:grid-cols-2 gap-8" id="video-grid">
+                <!-- Vídeos serão carregados dinamicamente -->
             </div>
         </div>
     </section>
 
     <footer class="bg-stone-950 text-stone-400 py-12 px-6 border-t border-stone-900 text-center md:text-left">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-white font-bold text-lg uppercase tracking-wider">
-                Carpintaria <span class="text-amber-500">Nascimento</span>
+            <div class="flex items-center gap-4">
+                <div class="text-white font-bold text-lg uppercase tracking-wider">Carpintaria <span class="text-amber-500">Nascimento</span></div>
+                <a href="https://www.instagram.com/contrucaocarpintarianascimento?igsh=MWI5ZDY3cGlicGFqaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram Carpintaria Nascimento" class="inline-flex items-center justify-center w-9 h-9 rounded bg-amber-700/10 hover:bg-amber-700/20 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-.88a1.13 1.13 0 1 1 0 2.25 1.13 1.13 0 0 1 0-2.25z"/>
+                    </svg>
+                </a>
             </div>
             <p class="text-sm">© 2024 Jonas Nascimento - Belo Horizonte/MG.</p>
         </div>
