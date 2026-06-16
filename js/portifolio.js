@@ -100,6 +100,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4 class="text-white font-bold uppercase text-sm tracking-widest">Processo em Vídeo ${index + 1}</h4>
                 <p class="text-stone-400 text-xs mt-2">Acompanhe detalhes de acabamento e montagem da madeira.</p>
             `;
+
+            // Lógica para pausar outros vídeos ao dar play neste
+            const videoElement = videoCard.querySelector('video');
+            videoElement.addEventListener('play', function() {
+                const allVideos = document.querySelectorAll('video');
+                allVideos.forEach(v => {
+                    if (v !== videoElement) v.pause();
+                });
+            });
+
             videoGrid.appendChild(videoCard);
         });
     }
