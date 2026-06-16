@@ -7,6 +7,11 @@
  * estender a configuração do Tailwind (com um tailwind.config.js).
  */
 
+/* Melhora a visibilidade do texto sobre imagens de fundo */
+nav a, nav div {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
 :root {
     /* Variáveis Globais - Paleta de Carpintaria (Preto, Marrom, Âmbar) */
     --bg-body: #090705;
