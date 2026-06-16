@@ -100,16 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4 class="text-white font-bold uppercase text-sm tracking-widest">Processo em Vídeo ${index + 1}</h4>
                 <p class="text-stone-400 text-xs mt-2">Acompanhe detalhes de acabamento e montagem da madeira.</p>
             `;
-
-            // Lógica para pausar outros vídeos ao dar play neste
-            const videoElement = videoCard.querySelector('video');
-            videoElement.addEventListener('play', function() {
-                const allVideos = document.querySelectorAll('video');
-                allVideos.forEach(v => {
-                    if (v !== videoElement) v.pause();
-                });
-            });
-
             videoGrid.appendChild(videoCard);
         });
     }
@@ -121,6 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
         tabPhotosBtn.addEventListener('click', () => {
             photoSection.classList.remove('hidden');
             videoSection.classList.add('hidden');
+            
+            // Pausa todos os vídeos ao sair da aba de vídeos
+            const allVideos = document.querySelectorAll('video');
+            allVideos.forEach(v => v.pause());
             
             tabPhotosBtn.classList.add('text-amber-500', 'border-amber-500');
             tabPhotosBtn.classList.remove('text-stone-500');
@@ -158,4 +152,14 @@ document.addEventListener('DOMContentLoaded', () => {
             else if (e.key === 'ArrowLeft') showPreviousImage();
         }
     });
+
+    // Lógica global e infalível para pausar outros vídeos ao dar play em um
+    document.addEventListener('play', function(e) {
+        if (e.target.tagName === 'VIDEO') {
+            const allVideos = document.querySelectorAll('video');
+            allVideos.forEach(video => {
+                if (video !== e.target) video.pause();
+            });
+        }
+    }, true); // O 'true' ativa a fase de captura, permitindo ouvir o evento 'play' que não borbulha
 });
