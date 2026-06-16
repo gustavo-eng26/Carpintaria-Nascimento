@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById('prev-lightbox');
     const nextBtn = document.getElementById('next-lightbox');
 
+    const tabPhotosBtn = document.getElementById('tab-photos-btn');
+    const tabVideosBtn = document.getElementById('tab-videos-btn');
+    const photoSection = document.getElementById('photo-section');
+    const videoSection = document.getElementById('video-section');
+
     let currentIndex = 0;
     const allImages = [];
 
@@ -99,9 +104,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Lógica das Abas (Pastas)
+    function setupTabs() {
+        if (!tabPhotosBtn || !tabVideosBtn) return;
+
+        tabPhotosBtn.addEventListener('click', () => {
+            photoSection.classList.remove('hidden');
+            videoSection.classList.add('hidden');
+            
+            tabPhotosBtn.classList.add('text-amber-500', 'border-amber-500');
+            tabPhotosBtn.classList.remove('text-stone-500');
+            tabVideosBtn.classList.remove('text-amber-500', 'border-amber-500');
+            tabVideosBtn.classList.add('text-stone-500');
+        });
+
+        tabVideosBtn.addEventListener('click', () => {
+            videoSection.classList.remove('hidden');
+            photoSection.classList.add('hidden');
+            
+            tabVideosBtn.classList.add('text-amber-500', 'border-amber-500');
+            tabVideosBtn.classList.remove('text-stone-500');
+            tabPhotosBtn.classList.remove('text-amber-500', 'border-amber-500');
+            tabPhotosBtn.classList.add('text-stone-500');
+        });
+    }
+
     // Event listeners
     renderGallery();
     renderVideoGrid();
+    setupTabs();
     closeBtn.addEventListener('click', closeLightboxModal);
     prevBtn.addEventListener('click', showPreviousImage);
     nextBtn.addEventListener('click', showNextImage);

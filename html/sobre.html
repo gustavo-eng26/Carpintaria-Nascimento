@@ -37,13 +37,9 @@
     <main class="min-h-screen">
         <section class="py-24 bg-stone-900">
             <div class="max-w-6xl mx-auto px-6">
-                <div class="flex flex-col lg:flex-row-reverse gap-16 items-center">
-                    <div class="lg:w-1/2">
-                        <div class="relative max-w-md">
-                            <img src="../imagens/imagem(136).jpg" alt="Foto sobre Jonas Nascimento" class="rounded shadow-2xl border border-stone-800 w-full" />
-                        </div>
-                    </div>
-                    <div class="lg:w-1/2">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center text-center lg:text-left">
+                    <!-- Bloco de Texto -->
+                    <div class="w-full order-1">
                         <span class="text-amber-500 font-semibold tracking-widest uppercase text-sm mb-4 block">Tradição e Compromisso</span>
                         <h1 class="text-4xl md:text-5xl mb-6 text-stone-100 font-bold leading-tight">Jonas Nascimento: <br><span class="italic text-stone-400">Do Tronco à Obra-Prima</span></h1>
                         <p class="text-stone-300 mb-6 text-lg leading-relaxed">
@@ -52,14 +48,25 @@
                         <p class="text-stone-300 mb-8 text-lg leading-relaxed">
                             Recentemente, Jonas escolheu <strong>Belo Horizonte</strong> para iniciar um novo capítulo, trazendo para as montanhas mineiras o segredo dos telhados coloniais que protegem e encantam gerações. Para ele, cada projeto é um compromisso com a segurança de sua família e a beleza do seu patrimônio.
                         </p>
+                    </div>
+
+                    <!-- Bloco da Imagem -->
+                    <div class="w-full flex justify-center order-2 lg:row-span-2">
+                        <div class="relative max-w-2xl w-full">
+                            <img src="../imagens/imagem(136).jpg" alt="Foto sobre Jonas Nascimento" class="rounded-3xl shadow-2xl border border-stone-800 w-full object-cover max-h-[500px] lg:max-h-[600px]" />
+                        </div>
+                    </div>
+
+                    <!-- Bloco de Estatísticas -->
+                    <div class="w-full order-3">
                         <div class="grid grid-cols-2 gap-8 border-t border-stone-700 pt-8">
                             <div>
-                                <p class="text-amber-500 font-bold text-4xl mb-1">Anos</p>
-                                <p class="text-stone-400 text-xs uppercase tracking-widest font-semibold">de Experiência Técnica</p>
+                                <p class="text-amber-500 font-bold text-3xl md:text-4xl mb-1">Anos</p>
+                                <p class="text-stone-400 text-[10px] md:text-xs uppercase tracking-widest font-semibold">de Experiência Técnica</p>
                             </div>
                             <div>
-                                <p class="text-amber-500 font-bold text-4xl mb-1">BH & Região</p>
-                                <p class="text-stone-400 text-xs uppercase tracking-widest font-semibold">Nova Base de Atendimento</p>
+                                <p class="text-amber-500 font-bold text-3xl md:text-4xl mb-1">BH & Região</p>
+                                <p class="text-stone-400 text-[10px] md:text-xs uppercase tracking-widest font-semibold">Nova Base de Atendimento</p>
                             </div>
                         </div>
                     </div>
